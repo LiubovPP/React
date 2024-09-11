@@ -1,12 +1,19 @@
 import './styles.css';
 
-function Button (){
-  const sendButtonName= "Send";
-  const getButtonName = "Get";
-  const isGetButton = false;
+function Button ({ buttonName = "Get data", isPrimaryButton = false}) {
+  // 1 вариант
+  // const buttonClass = isPrimaryButton ?
+  // "main-button primary-button":
+  // "main-button secondary-button"
 
-  return <button className='main-button'>
-    {isGetButton? getButtonName:sendButtonName} data
+
+  // 2 вариант
+  const buttonClass = `main-button ${
+    isPrimaryButton ? "primary-button" : "secondary-button"
+  }`;
+
+  return <button className={buttonClass}>
+    {buttonName}
     </button>;
 }
 
