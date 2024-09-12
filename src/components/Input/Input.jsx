@@ -8,6 +8,7 @@ function Input({ name, type = "text", placeholder, label, onInputChange }) {
     name={name}
     type={type}
     placeholder={placeholder}
+    onChange={onInputChange}
     />
   </div>
   );
